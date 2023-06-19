@@ -5,9 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Timetable</title>
     <style>
-        table tr td{border:2px solid gray;}
-    </style>
-    <!-- <style>
         table {
             width: 100%;
             border-collapse: collapse;
@@ -25,7 +22,7 @@
         tr:nth-child(even) {
             background-color: #dddddd;
         }
-    </style> -->
+    </style>
 </head>
 <body>
     <h1>Timetable</h1>
@@ -37,17 +34,24 @@
                 <th>Tuesday</th>
                 <th>Wednesday</th>
                 <th>Thursday</th>
-                <th>Friday</th>
+                <th colspan="2">Friday</th>
             </tr>
         </thead>
         <tbody>
             <tr>
-                <td>9:00 AM - 10:00 AM</td>
+                <td rowspan="2">9:00 AM - 10:00 AM</td>
                 <td>Math</td>
                 <td>Science</td>
                 <td>English</td>
                 <td>History</td>
                 <td>Geography</td>
+                <td>Lab</td>
+            </tr>
+            <tr>
+                <td colspan="2">Science</td>
+                <td>English</td>
+                <td>Science</td>
+                <td colspan="2">Math</td>
             </tr>
             <tr>
                 <td>10:00 AM - 11:00 AM</td>
@@ -56,6 +60,7 @@
                 <td>History</td>
                 <td>English</td>
                 <td>Science</td>
+                <td>Math</td>
             </tr>
             <tr>
                 <td>11:00 AM - 12:00 PM</td>
@@ -64,6 +69,7 @@
                 <td>Science</td>
                 <td>Math</td>
                 <td>Math</td>
+                <td>Lab</td>
             </tr>
         </tbody>
     </table>
