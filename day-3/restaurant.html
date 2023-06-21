@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Restaurant</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-image: url(hotel.webp);
+    }
+
+    header {
+      /* background-color: #333; */
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+    }
+
+    h1 {
+      margin: 0;
+    }
+
+    #menu {
+      padding: 20px;
+      color: white;
+      border: 1px solid black; 
+      border-radius: 5px; 
+    }
+
+    #menu h2 {
+      margin-top: 0;
+      font-size: 24px;
+      background-color: black;
+      padding: 10px;
+    }
+
+    #menu ul {
+      list-style-type: none;
+      padding: 0;
+      padding-top: 30px;
+      padding-bottom: 30px;
+      background-color: brown;
+    }
+
+    #menu li {
+      margin-bottom: 10px;
+      font-size: 18px;
+    }
+
+    #gallery {
+      padding: 20px;
+      color: white;
+      border: 1px solid black;
+      border-radius: 5px; 
+    }
+
+    #gallery h2 {
+      margin-top: 0;
+      font-size: 24px;
+      background-color: black;
+      padding: 10px;
+    }
+
+    .gallery-item {
+      display: inline-block;
+      margin-right: 10px;
+      margin-bottom: 10px;
+    }
+
+    .gallery-item img {
+      width: 200px;
+      height: 150px;
+      object-fit: cover;
+    }
+
+    .gallery-item img {
+  animation: fade-in 2s ease-in-out;}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+  </style>
+</head>
+<body>
+  <center>
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3671.444782458483!2d72.58708337359693!3d23.0441496155259!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x395e85c24ab60763%3A0xdc8cc6253449f5a4!2sHotel%20Elysian%20Residency!5e0!3m2!1sen!2sin!4v1687340916236!5m2!1sen!2sin" width="300" height="250" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    <header>
+      <h1>Welcome Hotel Elysian Residency,</h1>
+    </header>
+
+    <div id="menu" >
+      <h2>Menu</h2>
+      <ul>
+        <li>Gujarati-Thali</li>
+        <li>Sweet made with carrot</li>
+        <li>Dosa</li>
+        <li>Coffee</li>
+        <li>Tea</li>
+        <li>Steak with Roasted Potatoes</li>
+        <li>Grilled Salmon with Lemon Butter Sauce</li>
+        <li>Pasta Carbonara</li>
+        <li>Vegetable Stir-Fry</li>
+      </ul>
+    </div>
+
+    <div id="gallery">
+      <h2>Gallery</h2>
+      <div class="gallery-item">
+        <img src="dish1.jpg" alt="Dish 1" animation="fade-in 2s ease-in-out">
+      </div>
+      <div class="gallery-item">
+        <img src="dish2.jpg" alt="Dish 2">
+      </div>
+      <div class="gallery-item">
+        <img src="dish3.jpg" alt="Dish 3">
+      </div>
+      
+      <div class="gallery-item">
+        <img src="dish4.jpg" alt="Dish 4">
+      </div>
+      
+      <div class="gallery-item">
+        <img src="dish5.webp" alt="Dish 3">
+      </div>
+    </div>
+  </center>
+</body>
+</html>
