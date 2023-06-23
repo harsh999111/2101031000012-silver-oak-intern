@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            font-size: 22px;
+            font-weight: bold;
+        }
+        
+        #R1C1 {
+            width: 50%;
+            margin-right: 5%;
+        }
+        
+        #R1C2 {
+            width: 50%;
+            margin-right: 2%;
+        }
+        
+        #R1 div {
+            float: left;
+            width: 40%;
+        }
+        
+        #R1 {
+            background-color: rgb(144, 177, 107);
+            height: 50px;
+            padding-top: 20px;
+            width: 98%;
+            padding-left: 2%;
+            margin-bottom: 10px;
+        }
+        
+        #R2 {
+            height: 800px;
+            width: 100%;
+        }
+        
+        #R2R1,
+        #R2R2,
+        #R2R3,
+        #R2R4 {
+            height: 180px;
+            margin-bottom: 20px;
+            width: 100%;
+        }
+        
+        #R2R1 div,
+        #R2R2 div,
+        #R2R3 div,
+        #R2R4 div {
+            height: 180px;
+            width: 23.5%;
+            margin-right: 2%;
+            float: left;
+            background-color: rgb(153, 172, 207);
+            animation: colorChange 2s infinite alternate;
+        }
+        
+        #R2R1 div:last-child,
+        #R2R2 div:last-child,
+        #R2R3 div:last-child,
+        #R2R4 div:last-child {
+            margin-right: 0!important;
+            width: 23.5%!important;
+        }
+        
+        #R3R1 {
+            height: 180px;
+            margin-bottom: 20px;
+            width: 100%;
+            margin-right: 10%;
+        }
+        
+        #R3R1 div {
+            height: 180px;
+            width: 30%;
+            margin-right: 2%;
+            float: left;
+            background-color: rgb(133, 196, 108);
+            animation: colorChange 2s infinite alternate;
+        }
+        
+        #R3 {
+            padding-left: 9%;
+        }
+        
+        #R4 {
+            background-color: rgb(209, 177, 70);
+            margin-top: 3%;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            text-align: center;
+        }
+        
+        @keyframes colorChange {
+            from {
+                background-color: rgb(45, 95, 32);
+            }
+            to {
+                background-color: rgb(211, 211, 211);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <div id="R1">
+            <div id="R1C1">
+                logo
+            </div>
+            <div id="R1C2">Navigation</div>
+        </div>
+        <div id="R2">
+            <div id="R2R1">
+                <div id="R2R1C1">HTML</div>
+                <div id="R2R1C2">CSS</div>
+                <div id="R2R1C3">JAVA</div>
+                <div id="R2R1C4">REACT</div>
+            </div>
+            <div id="R2R2">
+                <div id="R2R2C1">Instagram</div>
+                <div id="R2R2C2">Facebook</div>
+                <div id="R2R2C3">Youtube</div>
+                <div id="R2R2C4">Linkedin</div>
+            </div>
+            <div id="R2R3">
+                <div id="R2R3C1">Lorem ipsum dolor sit, amet consectetur adipisicing.</div>
+                <div id="R2R3C2">Lorem ipsum dolor sit amet consectetur.</div>
+                <div id="R2R3C3">Lorem ipsum dolor sit amet.</div>
+                <div id="R2R3C4">Lorem ipsum dolor sit amet consectetur.\</div>
+            </div>
+            <div id="R2R4">
+                <div id="R2R4C1">Hello Html</div>
+                <div id="R2R4C2">Hello Css</div>
+                <div id="R2R4C3">Hello java</div>
+                <div id="R2R4C4">Hello React</div>
+            </div>
+        </div>
+        <div id="R3">
+            <div id="R3R1">
+                <div id="R3R1C1">
+                    Box-1
+                </div>
+                <div id="R3R1C2">
+                    Box-2
+                </div>
+                <div id="R3R1C3">
+                    Box-3
+                </div>
+            </div>
+        </div>
+        <div id="R4">
+            Footer
+        </div>
+    </div>
+</body>
+</html>

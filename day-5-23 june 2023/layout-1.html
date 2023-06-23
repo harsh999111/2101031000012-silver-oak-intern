@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Layout-1</title>
+    <style type="text/css">
+        * {
+            font-size: 22px;
+            font-weight: bold;
+        }
+        
+        #harsh,
+        #harsh-1 {
+            background-color: rgb(33, 196, 60);
+            height: 50px;
+            padding-top: 20px;
+            width: 98%;
+            text-align: center;
+            padding-left: 2%;
+            margin-bottom: 10px;
+            animation: logoAnimation 2s infinite alternate;
+        }
+        
+        #harsh.dark-theme,
+        #harsh-1.dark-theme {
+            background-color: #333;
+            color: #fff;
+        }
+        
+        #harsh.dark-theme::before,
+        #harsh-1.dark-theme::before {
+            content: 'Dark Theme';
+            display: block;
+        }
+        
+        #harsh-2 {
+            background-color: rgb(53, 97, 99);
+            height: 90px;
+            width: 100%;
+            padding-top: 60px;
+            text-align: center;
+            margin-bottom: 10px;
+            animation: slideAnimation 1.5s infinite alternate;
+        }
+        
+        #R4 {
+            height: 600px;
+            width: 100%;
+            margin-bottom: 10px;
+        }
+        
+        #R4C1 {
+            width: 28%;
+            margin-right: 2%;
+            animation: fadeAnimation 1.5s infinite;
+        }
+        
+        #R4C2 {
+            width: 70%;
+            animation: rotateAnimation 2s infinite linear;
+        }
+        
+        #R4 div {
+            float: left;
+            height: 320px;
+            padding-top: 280px;
+            text-align: center;
+            background-color: gray;
+            animation: fadeAnimation 1.5s infinite;
+        }
+        
+        #R5 {
+            background-color: rgb(156, 201, 34);
+            height: 33px;
+            width: 100%;
+            padding-top: 7px;
+            text-align: center;
+            margin-bottom: 10px;
+            animation: fadeAnimation 1.5s infinite;
+        }
+        
+        .dark-theme {
+            background-color: #333;
+            color: #fff;
+        }
+        
+        @keyframes logoAnimation {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.2); }
+            100% { transform: scale(1); }
+        }
+        
+        @keyframes fadeAnimation {
+            0% { opacity: 1; }
+            50% { opacity: 0.5; }
+            100% { opacity: 1; }
+        }
+        
+        @keyframes slideAnimation {
+            0% { transform: translateX(0); }
+            50% { transform: translateX(20px); }
+            100% { transform: translateX(0); }
+        }
+        
+        @keyframes rotateAnimation {
+            0% { transform: rotate(0); }
+            100% { transform: rotate(360deg); }
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <div id="harsh">
+            Harsh Logo
+        </div>
+        <div id="harsh-1">
+            Nav bar
+        </div>
+        <div id="harsh-2">
+            Header
+        </div>
+        <div id="R4">
+            <div id="R4C1">
+                Side Bar
+                <p>Socet</p>
+            </div>
+            <div id="R4C2">
+                Body Part
+                <p>Silver Oak University</p>
+            </div>
+        </div>
+        <div id="R5">
+            Footer Part
+        </div>
+    </div>
+
+    <script>
+        const body = document.body;
+        const toggleButton = document.createElement('button');
+        toggleButton.textContent = 'Toggle Theme';
+        document.body.appendChild(toggleButton);
+
+        toggleButton.addEventListener('click', () => {
+            body.classList.toggle('dark-theme');
+        });
+    </script>
+</body>
+</html>
