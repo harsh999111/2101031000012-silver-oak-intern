@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>javascript</title>
+    <style type="text/css">
+        body { background-color: rgb(192, 192, 50); }
+        div { background-color: rgb(65, 240, 152); height: 300px; width: 300px; }
+    </style>
+    <script src="demo.js
+    "></script>
+    <script type="text/javascript">
+        function demoInternalAlert() {
+            alert("Internal Alert.");
+        }
+        
+        function demoInternalConfirm() {
+            if (confirm("Are you sure..??")) {
+                alert("YESSS");
+            } else {
+                alert("NOOOO");
+            }
+        }
+        
+        function demoInternalPrompt() {
+            var fName = prompt("Enter Firstname Here..");
+            var lName = prompt("Enter Lastname Here..");
+            alert(fName + " " + lName);
+        }
+
+        function bodyBGGreen() {
+            document.body.style.backgroundColor = "green";
+        }
+        
+        function divBGGray() {
+            document.getElementById("D1").style.backgroundColor = "gray";
+        }
+
+        function divBGDynamic() {
+            var color = prompt("Enter color name here..");
+            document.getElementById("D1").style.backgroundColor = color;
+        }
+        
+        function bodyBGDynamic() {
+            var color = prompt("Enter color name here..");
+            document.body.style.backgroundColor = color;
+        }
+
+        function bodyBGCP1() {
+            var color = document.getElementById("CP1").value;
+            document.body.style.backgroundColor = color;
+        }
+        
+        function divBGCP2() {
+            var color = document.getElementById("CP2").value;
+            document.getElementById("D1").style.backgroundColor = color;
+        }
+        function demo1(params) {
+            var a=prompt("enter the no-1");
+            var b=prompt("enter the no-2");
+            if(a>b)
+            {
+                alert(a+"is grater");
+            }
+            else{
+                alert(b+"is grater")
+            }
+        }
+        function demo2(params) {
+            var r=prompt("enter the radius");
+            var area;
+            area=(3.14*r*r);
+            alert(area);
+            
+        }
+    </script>
+</head>
+<body>
+    <div id="D1">
+        Hello Harsh
+    </div>
+    <hr/>
+    <input type="button" value="Alert Inline" onclick="alert('Hello Guys')" />&nbsp;&nbsp;
+    <input type="button" value="Confirm Inline" onclick="confirm('Are You Sure..??')" />&nbsp;&nbsp;
+    <input type="button" value="Prompt Inline" onclick="prompt('Enter Firstname Here..')" />&nbsp;&nbsp;
+    <hr/>
+    <input type="button" value="Alert Internal" onclick="demoInternalAlert()" />&nbsp;&nbsp;
+    <input type="button" value="Confirm Internal" onclick="demoInternalConfirm()" />&nbsp;&nbsp;
+    <input type="button" value="Prompt Internal" onclick="demoInternalPrompt()" />&nbsp;&nbsp;
+    <hr/>
+    <input type="button" value="Alert External" onclick="demoExternalAlert()" />&nbsp;&nbsp;
+    <input type="button" value="Confirm External" onclick="demoExternalConfirm()" />&nbsp;&nbsp;
+    <input type="button" value="Prompt External" onclick="demoExternalPrompt()" />&nbsp;&nbsp;
+    <hr/>
+    <input type="button" value="Body Bg Green" onclick="bodyBGGreen()" />&nbsp;&nbsp;
+    <input type="button" value="Div Bg Gray" onclick="divBGGray()" />&nbsp;&nbsp;
+    <hr/>
+    <input type="button" value="Body Bg Prompt" onclick="bodyBGDynamic()" />&nbsp;&nbsp;
+    <input type="button" value="Div Bg Prompt" onclick="divBGDynamic()" />&nbsp;&nbsp;
+    <hr/>
+    <input type="color" id="CP1" onchange="bodyBGCP1()" />&nbsp;&nbsp;
+    <input type="color" id="CP2" onchange="divBGCP2()" />&nbsp;&nbsp;
+    <hr>
+    <input type="button" value="Find Max Number" onclick="demo1()" />&nbsp;&nbsp;
+    <input type="button" value="Find area of circle" onclick="demo2()" />&nbsp;&nbsp;
+</body>
+</html>
