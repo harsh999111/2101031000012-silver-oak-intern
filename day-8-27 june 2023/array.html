@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Table Example</title>
+  <style>
+    table {
+      border-collapse: collapse;
+      margin: auto;
+    }
+
+    td {
+      padding: 20px;
+      text-align: center;
+    }
+
+    .name {
+      font-weight: bold;
+    }
+
+    input[type="text"] {
+      width: 300px;
+      padding: 5px;
+    }
+
+    button {
+      padding: 10px 20px;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      border-radius: 8%;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #1843a0;
+    }
+
+    button:active {
+      transform: scale(0.95);
+    }
+
+    center {
+      font-style: italic;
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+  <table border="1" cellpadding="8">
+    <tbody>
+      <tr>
+        <td id="array" class="name">Array:</td>
+        <td><input type="text" size="40" id="inputArray" placeholder="Enter array"></td>
+      </tr>
+      <tr>
+        <td id="push" class="name">Push:</td>
+        <td>
+          <input type="text" size="40" id="inputPush" placeholder="Enter element to push">
+          <button id="btnpush">Push</button>
+          <br><br>
+          New element will be added at the last
+        </td>
+      </tr>
+      <tr>
+        <td id="pop" class="name">Pop:</td>
+        <td>
+          <button id="btnpop">Pop</button><br>
+          Last element of the array will be removed
+        </td>
+      </tr>
+      <tr>
+        <td id="unshift" class="name">Unshift:</td>
+        <td>
+          <input type="text" size="40" id="inputUnshift" placeholder="Enter element to unshift">
+          <button id="btnunshift">Unshift</button><br>
+          New element will be added first
+        </td>
+      </tr>
+      <tr>
+        <td id="shift" class="name">Shift:</td>
+        <td>
+          <button id="btnshift">Shift</button><br>
+          First element will be removed
+        </td>
+      </tr>
+      <tr>
+        <td id="sort" class="name">Sort:</td>
+        <td>
+          <button id="btnsort">Sort array</button>
+        </td>
+      </tr>
+      <tr>
+        <td id="reverse" class="name">Reverse:</td>
+        <td>
+          <button id="btnreverse">Reverse</button>
+        </td>
+      </tr>
+      <tr>
+        <td id="cancel" class="name">Merge:</td>
+        <td>
+          <input type="text" size="40" id="inputMerge" placeholder="Enter array to merge">
+          <button id="btnmerge">Merge array</button>
+          <br><br>
+          <input type="text" size="40" id="mergedArray" placeholder="Merged array" readonly>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <script>
+    // JavaScript code goes here
+
+    // Array to store the elements
+    var arr = [];
+
+    // Function to update the Array field
+    function updateArrayField() {
+      var inputArray = document.getElementById("inputArray");
+      inputArray.value = arr.join(", ");
+    }
+
+    // Function to handle the Push button click event
+    function pushElement() {
+      var inputPush = document.getElementById("inputPush");
+      var element = inputPush.value;
+      arr.push(element);
+      updateArrayField();
+      inputPush.value = "";
+    }
+
+    // Function to handle the Pop button click event
+    function popElement() {
+      arr.pop();
+      updateArrayField();
+    }
+
+    // Function to handle the Unshift button click event
+    function unshiftElement() {
+      var inputUnshift = document.getElementById("inputUnshift");
+      var element = inputUnshift.value;
+      arr.unshift(element);
+      updateArrayField();
+      inputUnshift.value = "";
+    }
+
+    // Function to handle the Shift button click event
+    function shiftElement() {
+      arr.shift();
+      updateArrayField();
+    }
+
+    // Function to handle the Sort button click event
+    function sortArray() {
+      arr.sort();
+      updateArrayField();
+    }
+
+    // Function to handle the Reverse button click event
+    function reverseArray() {
+      arr.reverse();
+      updateArrayField();
+    }
+
+    // Function to handle the Merge button click event
+    function mergeArray() {
+      var inputMerge = document.getElementById("inputMerge");
+      var mergeArr = inputMerge.value.split(",");
+      arr = arr.concat(mergeArr);
+      updateArrayField();
+      inputMerge.value = "";
+
+      var mergedArray = document.getElementById("mergedArray");
+      mergedArray.value = arr.join(", ");
+    }
+
+    // Attach event listeners to the buttons
+    btnpush.addEventListener("click", pushElement);
+    btnpop.addEventListener("click", popElement);
+    btnunshift.addEventListener("click", unshiftElement);
+    btnshift.addEventListener("click", shiftElement);
+    btnsort.addEventListener("click", sortArray);
+    btnreverse.addEventListener("click", reverseArray);
+    btnmerge.addEventListener("click", mergeArray);
+  </script>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>col-row</title>
+</head>
+<body>
+    <input type="text" name="" id="row" placeholder="enter the number of row"><br>
+    <input type="text" name="" id="col" placeholder="enter the number of col"><br>
+    <input type="button" name="" id="btn" value="generated table"><br>
+    <script>
+        var row = document.getElementById("row");
+        var col = document.getElementById("col");
+        var btn = document.getElementById("btn");
+
+        btn.addEventListener("click", () => {
+            document.write("<table border='1' width='80%' height='300px'>");
+            for (let i = 0; i < row.value; i++) {
+                document.write("<tr>");
+                for (let j = 0; j < col.value; j++) {
+                    document.write("<td align='center'>" + "[" + i + "]" + "[" + j + "]" + "</td>");
+                }
+                document.write("</tr>");
+            }
+            document.write("</table>");
+        });
+        
+    </script>
+</body>
+</html>
