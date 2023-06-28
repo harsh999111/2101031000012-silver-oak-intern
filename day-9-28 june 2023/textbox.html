@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text-box</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js" type="text/javascript"></script>
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $("#HTML").focus(function(){
+                $(this).css("background-color","red");
+            });
+            $("#CSS").blur(function(){
+                $(this).css("background-color","orange");
+            });
+            $("#JavaScript").keypress(function(){
+                alert($(this).val());
+            });
+            $("#Jquary").keyup(function(){
+                alert($(this).val());
+            });
+        });
+        
+    </script>
+</head>
+<body>
+        <input type="text" id="HTML" placeholder="HTML" /><hr/>
+		<input type="text" id="CSS" placeholder="CSS" /><hr/>
+		<input type="text" id="JavaScript" placeholder="JavaScript" /><hr/>
+		<input type="text" id="Jquary" placeholder="Jquary" /><hr/>
+</body>
+</html>

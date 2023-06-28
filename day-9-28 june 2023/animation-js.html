@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animation</title>
+    <style>
+        #animated-div {
+            background: #1ea0b8; /* Initial background color */
+            height: 100px;
+            width: 100px;
+            position: absolute;
+        }
+    
+        button {
+            border-radius: 8%; /* Make the button rounded */
+            background-color: #1ea0b8; /* Set the initial background color */
+            color: #fff;
+            /* padding: 10px 10px; */
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.3s; /* Add transition effect */
+        }
+    
+        button:hover {
+            background-color: #ff0000; /* Change background color on hover */
+        }
+    </style>
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("#harsh1").click(function(){
+                $("#animated-div").animate({left: '250px'});
+            });
+            $("#harsh2").click(function(){
+                $("#animated-div").animate({
+                    left: '250px',
+                    opacity: '0.5',
+                    height: '150px',
+                    width: '150px'
+                });
+                $("#animated-div").css('background', '#ff0000'); // Change background color to red
+            });
+            $("#harsh3").click(function(){
+                var div = $("#animated-div");
+                div.animate({height: '300px', opacity: '0.4'}, "slow");
+                div.animate({width: '300px', opacity: '0.8'}, "slow");
+                div.animate({height: '100px', opacity: '0.4'}, "slow");
+                div.animate({width: '100px', opacity: '0.8'}, "slow");
+                div.css('background', '#00ff00'); // Change background color to green
+            });
+        });
+    </script>
+</head>
+<body>
+    <button id="harsh1" >Animation1</button>
+    <button id="harsh2">Animation2</button>
+    <button id="harsh3">Animation3</button>
+    <div id="animated-div"></div>
+</body>
+</html>

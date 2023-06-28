@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jquary</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function(){
+            
+            $("#BtnShow").attr("disabled",true);
+            
+            $("#BtnHide").click(function(){
+                if(confirm("Are you sure..??"))
+                {
+                    $("#MyDiv").hide(1000);
+                    $(this).attr("disabled",true);
+                    $("#BtnShow").attr("disabled",false);
+                    $("#BtnToggle").text("Show");
+                }
+            });
+            
+            $("#BtnShow").click(function(){
+                if(confirm("Are you sure..??"))
+                {
+                    $("#MyDiv").show(1000);
+                    $(this).attr("disabled",true);
+                    $("#BtnHide").attr("disabled",false);
+                    $("#BtnToggle").text("Hide");
+                }
+            });
+            
+            $("#BtnToggle").click(function(){
+                if(confirm("Are you sure..??"))
+                {
+                    $("#MyDiv").toggle(1000);
+                    $("#MyDiv").toggleClass("color-change");
+                    ($(this).text()=="Hide")
+                        ?($(this).text("Show"),$("#BtnHide").attr("disabled",true),$("#BtnShow").attr("disabled",false))
+                        :($(this).text("Hide"),$("#BtnHide").attr("disabled",false),$("#BtnShow").attr("disabled",true))
+                }
+            });
+            
+            $("#BtnPlus").click(function(){
+                var MDH=parseInt($("#MyDiv").css("height"));
+                if(MDH<=500)
+                {
+                    MDH+=10;
+                    $("#MyDiv").css("height",MDH);
+                    $("#MyDiv").css("width",MDH);
+                }
+                else{
+                    alert("More than 500px is not possible.");
+                }
+            });
+            
+            $("#BtnMinus").click(function(){
+                var MDH=parseInt($("#MyDiv").css("height"));
+                if(MDH>=20)
+                {
+                    MDH-=10;
+                    $("#MyDiv").css("height",MDH);
+                    $("#MyDiv").css("width",MDH);
+                }
+                else{
+                    alert("Less than 20px is not possible.");
+                }
+            });
+        });
+    </script>
+    <style>
+        #MyDiv {
+            height: 300px;
+            width: 300px;
+            background-color: Navy;
+            transition: all 3s ease;
+        }
+        
+        .color-change {
+            background-color: red;
+        }
+        
+        #BtnHide {
+            background-color: aqua;
+        }
+        
+        #BtnToggle {
+            background-color: cadetblue;
+        }
+        
+        #BtnHide:hover,
+        #BtnShow:hover,
+        #BtnToggle:hover,
+        #BtnPlus:hover,
+        #BtnMinus:hover {
+            background-color: lightgray;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div id="MyDiv"></div><hr />
+    <button id="BtnHide">Hide</button>&nbsp;&nbsp;<button id="BtnShow" style="background-color: chartreuse;">Show</button><hr />
+    <button id="BtnToggle">Hide</button><hr />
+    <button id="BtnPlus" style="font-size:xx-large; background-color: aqua;"><b>+</b></button>&nbsp;&nbsp;<button id="BtnMinus" style="font-size:xx-large; background-color: red;"><b>-</b></button><hr />
+</body>
+</html>
