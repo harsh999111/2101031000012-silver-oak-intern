@@ -1,10 +1,8 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Drag</title>
-    <link href="https://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css" rel = "stylesheet" type="text/css" />
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html>
+   <head>
+      <link href="https://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css" rel = "stylesheet" type="text/css" />
       <script src="https://code.jquery.com/jquery-1.10.2.js" type="text/javascript"></script>
       <script src="https://code.jquery.com/ui/1.10.4/jquery-ui.js" type="text/javascript"></script>
      
@@ -34,54 +32,74 @@
              border:solid 3px #000000;
          }
       </style>
-    <script type="text/javascript">
-        $(document).ready(function () {
-            $("#MyDiv").draggable();
+      
+      <script type="text/javascript">
+          $(document).ready(function () {
+              $("#MyDiv").draggable();
 
-            $("#MyHomeDiv span").draggable({
-                containment: "#MyHomeDiv"
-            });
+              $("#MyHomeDiv span").draggable({
+                  containment: "#MyHomeDiv"
+              });
 
-            $("#MyHorizontalDiv span").draggable({
-                axis: "x"
-            });
+              $("#MyHorizontalDiv span").draggable({
+                  axis: "x"
+              });
 
-            $("#MyVerticalDiv span").draggable({
-                axis: "y"
-            });
+              $("#MyVerticalDiv span").draggable({
+                  axis: "y"
+              });
 
 
-            $("#MyFiftyPixelDiv span").draggable({
-                distance: 200
-            });
+              $("#MyFiftyPixelDiv span").draggable({
+                  distance: 200
+              });
 
-            $("#MyThreeSecondsDelayDiv span").draggable({
-                delay:3000
-            });
-            
-           });
-    </script>
-</head>
-<body>
-    <div id="MyDiv">
-        <p>Hello Silver Oak University</p>
-    </div><hr>
-    <div id="MyHomeDiv">
-        <span>This is Silver oak University.....</span><br><br>
-    </div>
-    <hr>
-    <div id="MyVerticalDiv">
-        <span>Welcome to silver Oak University.....</span><br><br>
-    </div>
-    <hr>
-    <div id="MyThreeSecondsDelayDiv">
-        <span>I Can Move Only After 3 Seconds....</span><br><br>
-    </div>
-    <hr>
+              $("#MyThreeSecondsDelayDiv span").draggable({
+                  delay:3000
+              });
+			  
+   		  });
+      </script>
 
-    <div id="MyFiftyPixelDiv">
-        <span>I Can Move Only After 200 PX....</span><br><br>
-    </div>
-    <hr>
-</body>
+   </head>
+
+   <body>
+      
+      <div id ="MyDiv">
+         <p>Hello Students...</p>
+      </div>
+      
+      <hr />
+      
+      <div id="MyHomeDiv">
+         <span>This Is My Home And I Can Move Within It Only.....</span><br /><br />
+      </div>
+      
+      <hr />
+
+      <div id="MyHorizontalDiv">
+         <span>I Can Move Only Horizontaly....</span><br /><br />
+      </div>
+      
+      <hr />
+
+      <div id="MyVerticalDiv">
+         <span>I Can Move Only Verticaly....</span><br /><br />
+      </div>
+
+      <hr />
+
+      <div id="MyThreeSecondsDelayDiv">
+         <span>I Can Move Only After 3 Seconds....</span><br /><br />
+      </div>
+
+      <hr />
+
+      <div id="MyFiftyPixelDiv">
+         <span>I Can Move Only After 200 PX....</span><br /><br />
+      </div>
+
+      <hr />
+
+   </body>
 </html>
