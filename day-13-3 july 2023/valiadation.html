@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Validation</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            font-family: Arial, sans-serif;
+        }
+        
+        form {
+            width: 300px;
+        }
+        
+        input[type="text"],
+        textarea {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 8px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        
+        button {
+            padding: 8px 16px;
+            background-color: #4CAF50;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        
+        small {
+            color: red;
+        }
+        
+        hr {
+            margin-top: 16px;
+            margin-bottom: 16px;
+        }
+		small{color:red;}
+    </style>
+</head>
+<body>
+    <form>
+        <input type="text" id="TxtName" autofocus placeholder="Enter the name here.." maxlength="40" /><br />
+        <small id="TxtNameValidation"></small>
+        <hr />
+        <input type="text" id="TxtContactNo" placeholder="Enter the contact no. here.." maxlength="10" /><br />
+        <small id="TxtContactNoValidation"></small>
+        <hr />
+        <input type="text" id="TxtEmailId" placeholder="Enter the email id here.." maxlength="50" /><br />
+        <small id="TxtEmailIdValidation"></small>
+        <hr />
+        <textarea rows="5" id="TxtContactMsg" placeholder="Enter the contact msg here.." maxlength="300"></textarea><br />
+        <small id="TxtContactMsgValidation"></small>
+        <hr />
+        <input type="text" id="TxtAdharNo" placeholder="Enter adhar card no...." maxlength="16" /><br />
+        <small id="TxtAdharValidation"></small>
+        <hr />
+        <input type="text" id="TxtAddress" placeholder="Enter home address here.." maxlength="70" /><br />
+        <small id="TxtAddressValidation"></small>
+        <hr />
+        <button id="BtnSubmit">Submit here..</button>
+    </form>
+</body>
+</html>
