@@ -60,6 +60,7 @@
         $name = $_POST['name'];
         $email = $_POST['email'];
         $feedback = $_POST['feedback'];
+
         $host = 'your_database_host';
         $username = 'your_username';
         $password = 'your_password';
@@ -70,11 +71,22 @@
             die('Connection failed: ' . $conn->connect_error);
         }
 
-        $sql = "INSERT INTO feedback (name, email, feedback) VALUES ('$name', '$email', '$feedback')";
-        if ($conn->query($sql) === TRUE) {
+        $createTableSql = "CREATE TABLE IF NOT EXISTS feedbacks (
+            id INT AUTO_INCREMENT PRIMARY KEY,
+            name VARCHAR(255) NOT NULL,
+            email VARCHAR(255) NOT NULL,
+            feedback TEXT NOT NULL,
+            created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+        )";
+
+        $conn->query($createTableSql);
+
+        $insertSql = "INSERT INTO feedbacks (name, email, feedback) VALUES ('$name', '$email', '$feedback')";
+
+        if ($conn->query($insertSql) === TRUE) {
             echo "Thank you for your feedback!";
         } else {
-            echo "Error: " . $sql . "<br>" . $conn->error;
+            echo "Error: " . $insertSql . "<br>" . $conn->error;
         }
 
         $conn->close();
